@@ -367,47 +367,6 @@ describe("A spec", function() {
   });
 });
 
-// Disabling Suites
-
-// Suites can be disabled with the xdescribe function. These suites and any specs inside them are skipped when run and thus their results will show as pending.
-
-xdescribe("A spec", function() {
-  var foo;
-
-  beforeEach(function() {
-    foo = 0;
-    foo += 1;
-  });
-
-  it("is just a function, so it can contain any code", function() {
-    expect(foo).toEqual(1);
-  });
-});
-
-// Pending Specs
-
-// Pending specs do not run, but their names will show up in the results as pending.
-
-describe("Pending specs", function() {
-
-// Any spec declared with xit is marked as pending.
-
-  xit("can be declared 'xit'", function() {
-    expect(true).toBe(false);
-  });
-
-// Any spec declared without a function body will also be marked pending in results.
-
-  // it("can be declared with 'it' but without a function");
-
-// And if you call the function pending anywhere in the spec body, no matter the expectations, the spec will be marked pending. A string passed to pending will be treated as a reason and displayed when the suite finishes.
-
-  it("can be declared by calling 'pending' in the spec body", function() {
-    expect(true).toBe(false);
-    pending('this is why it is pending');
-  });
-});
-
 // Spies
 
 // Jasmine has test double functions called spies. A spy can stub any function and tracks calls to it and all arguments. A spy only exists in the describe or it block in which it is defined, and will be removed after each spec. There are special matchers for interacting with spies. This syntax has changed for Jasmine 2.0.
@@ -755,7 +714,7 @@ describe("A spy", function() {
     expect(spy.calls.mostRecent().object).toBe(quux);
   });
 
-.calls.reset(): clears all tracking for a spy
+// .calls.reset(): clears all tracking for a spy
 
   it("can be reset", function() {
     foo.setBar(123);
@@ -998,7 +957,6 @@ describe("custom asymmetry", function() {
     });
   });
 });
-
 // Jasmine Clock
 
 // This syntax has changed for Jasmine 2.0. The Jasmine Clock is available for testing time dependent code.
@@ -1137,5 +1095,47 @@ describe("Asynchronous specs", function() {
         }
       );
     });
+  });
+});
+
+
+// Disabling Suites
+
+// Suites can be disabled with the xdescribe function. These suites and any specs inside them are skipped when run and thus their results will show as pending.
+
+xdescribe("A spec", function() {
+  var foo;
+
+  beforeEach(function() {
+    foo = 0;
+    foo += 1;
+  });
+
+  it("is just a function, so it can contain any code", function() {
+    expect(foo).toEqual(1);
+  });
+});
+
+// Pending Specs
+
+// Pending specs do not run, but their names will show up in the results as pending.
+
+describe("Pending specs", function() {
+
+// Any spec declared with xit is marked as pending.
+
+  xit("can be declared 'xit'", function() {
+    expect(true).toBe(false);
+  });
+
+// Any spec declared without a function body will also be marked pending in results.
+
+  // it("can be declared with 'it' but without a function");
+
+// And if you call the function pending anywhere in the spec body, no matter the expectations, the spec will be marked pending. A string passed to pending will be treated as a reason and displayed when the suite finishes.
+
+  it("can be declared by calling 'pending' in the spec body", function() {
+    expect(true).toBe(false);
+    pending('this is why it is pending');
   });
 });
