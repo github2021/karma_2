@@ -5,22 +5,13 @@ describe('greeter', function () {
   });
 });
 
-
-
 // introduction.js
-
 // Jasmine is a behavior-driven development framework for testing JavaScript code. It does not depend on any other JavaScript frameworks. It does not require a DOM. And it has a clean, obvious syntax so that you can easily write tests. This guide is running against Jasmine version 2.8.0.
-
 // Standalone Distribution
-
 // The releases page has links to download the standalone distribution, which contains everything you need to start running Jasmine. After downloading a particular version and unzipping, opening SpecRunner.html will run the included specs. You'll note that both the source files and their respective specs are linked in the <head> of the SpecRunner.html. To start using Jasmine, replace the source/spec files with your own.
-
 // Suites: describe Your Tests
-
 // A test suite begins with a call to the global Jasmine function describe with two parameters: a string and a function. The string is a name or title for a spec suite - usually what is being tested. The function is a block of code that implements the suite.
-
 // Specs
-
 // Specs are defined by calling the global Jasmine function it, which, like describe takes a string and a function. The string is the title of the spec and the function is the spec, or test. A spec contains one or more expectations that test the state of the code. An expectation in Jasmine is an assertion that is either true or false. A spec with all true expectations is a passing spec. A spec with one or more false expectations is a failing spec.
 
 describe("A suite", function() {
