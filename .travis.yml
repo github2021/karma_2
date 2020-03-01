@@ -9,9 +9,9 @@ script:
   - npm test
 after_success:
   - echo 'Billy'
-deploy:
-provider: script
-script: ballsack.sh
-on:
-  all_branches: true
-  condition: $TRAVIS_BRANCH =~ ^(master)$
+# deploy:
+# provider: script
+# script: ballsack.sh
+# on:
+#   all_branches: true
+#   condition: $TRAVIS_BRANCH =~ ^(master)$
