@@ -1,5 +1,6 @@
 sudo: false
 language: node_js  
+  - "5"
 jobs:
   include:
     - stage: test
