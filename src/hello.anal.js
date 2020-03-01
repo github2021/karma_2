@@ -297,9 +297,9 @@ describe("A spec using beforeAll and afterAll", function() {
     foo += 1;
   });
 
-  it("does not reset foo between specs", function() {
-    expect(foo).toEqual(2);
-  });
+//   it("does not reset foo between specs", function() {
+//     expect(foo).toEqual(2);
+//   });
 });
 
 // The this keyword
@@ -734,9 +734,9 @@ describe("A spy, when created manually", function() {
     whatAmI("I", "am", "a", "spy");
   });
 
-  it("is named, which helps in error reporting", function() {
-    expect(whatAmI.and.identity()).toEqual('whatAmI');
-  });
+//   it("is named, which helps in error reporting", function() {
+//     expect(whatAmI.and.identity()).toEqual('whatAmI');
+//   });
 
   it("tracks that the spy was called", function() {
     expect(whatAmI).toHaveBeenCalled();
