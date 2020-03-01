@@ -3,3 +3,10 @@ language: node_js
 node_js:
 #  - "4"
   - "5"
+  
+echo 'Build starts!!'
+echo 'Installing Deps!'
+
+#   - yarn
+#   - echo 'Testing!'
+#   - npm run test:prod
