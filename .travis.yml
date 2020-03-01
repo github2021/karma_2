@@ -10,6 +10,9 @@ jobs:
     - stage: deploy
       script:
         - echo 'anal sex master'
+    - stage: deploy2
+      script:
+        - echo 'anal sex master teen'
 stages:
   - name: test
     # require the type to be a PR
@@ -17,6 +20,9 @@ stages:
   - name: deploy
     # require the type to be push to master
     if: type = push AND branch = master
+  - name: deploy2
+    # require the type to be push to master
+    if: type = pull AND branch = master
     
     
     
