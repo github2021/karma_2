@@ -9,9 +9,6 @@ jobs:
         - npm test
     - stage: deploy
       script:
-        - echo 'anal sex master'
-    - stage: deploy2
-      script:
         - echo 'anal sex master teen'
 stages:
   - name: test
@@ -20,9 +17,6 @@ stages:
   - name: deploy
     # require the type to be push to master
     if: type = push AND branch = master
-  - name: deploy2
-    # require the type to be push to master
-    if: type = pull AND branch = master
     
 # node_js:
 # #  - "4"
