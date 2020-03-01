@@ -18,8 +18,6 @@ stages:
     # require the type to be push to master
     if: type = push AND branch = master
     
-    
-    
 # node_js:
 # #  - "4"
 #   - "5"
