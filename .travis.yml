@@ -1,6 +1,25 @@
 sudo: false
-language: node_js
-
+language: node_js  
+jobs:
+  include:
+    - stage: test
+      script:
+        - echo 'Build starts!!'
+        - echo 'Installing Deps!'
+        - npm test
+    - stage: deploy
+      script:
+        - echo 'anal sex master'
+stages:
+  - name: test
+    # require the type to be a PR
+    if: type = pull_request
+  - name: deploy
+    # require the type to be push to master
+    if: type = push AND branch = master
+    
+    
+    
 # node_js:
 # #  - "4"
 #   - "5"
@@ -11,26 +30,6 @@ language: node_js
 # after_success:
 #   - echo 'Billy'
   
-  
-  
-  
-jobs:
-  include:
-    - stage: test
-      script:
-  - echo 'Build starts!!'
-  - echo 'Installing Deps!'
-  - npm test
-    - stage: deploy
-      script:
-  - echo 'anal sex master'
-stages:
-  - name: test
-    # require the type to be a PR
-    if: type = pull_request
-  - name: deploy
-    # require the type to be push to master
-    if: type = push AND branch = master
   
   
   
