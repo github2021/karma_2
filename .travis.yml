@@ -1,11 +1,13 @@
 sudo: false
 language: node_js  
+  - "5"
 jobs:
   include:
     - stage: test
       script:
         - echo 'Build starts!!'
         - echo 'Installing Deps!'
+        - npm i
         - npm test
     - stage: deploy
       script:
